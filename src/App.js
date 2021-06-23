@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
-import { light, dark } from "./Theme";
 import { GlobalStyles } from "./GlobalStyles";
 import { ThemeContext } from "./Context/ThemeContext";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
 const App = () => {
-  const { theme } = useContext(ThemeContext);
-  const mode = theme === "light" ? light : dark;
+  const { mode } = useContext(ThemeContext);
   return (
     <>
       <GlobalStyles theme={mode} />
-      <h1>App</h1>
+      <Navbar />
+      <Home />
     </>
   );
 };
