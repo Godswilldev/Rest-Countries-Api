@@ -12,13 +12,10 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 62.5%;
       box-sizing: border-box;
   }
-
   body {
-font-family: 'Nunito Sans', sans-serif;   
- transition:.3s all;
-         background: ${({ theme }) => theme.body};
+    font-family: 'Nunito Sans', sans-serif;   
+    transition:.3s all;
+    background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-
-
   }
 `;
