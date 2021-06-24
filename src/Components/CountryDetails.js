@@ -14,7 +14,35 @@ const CountryDetails = (props) => {
     <div>
       <h1>Country Details {col} </h1>
       {currentCountry ? (
-        <div>{currentCountry.name}</div>
+        <div>
+          <h1>{currentCountry.name}</h1>
+          <img src={currentCountry.flag} alt={`${currentCountry.name} flag`} />
+          <h2>Native Name: {currentCountry.nativeName} </h2>
+          <h2>Region: {currentCountry.region} </h2>
+          <h2>Population: {currentCountry.population} </h2>
+          <h2>Sub Region: {currentCountry.subregion} </h2>
+          <h2>Capital: {currentCountry.capital} </h2>
+          <h2>
+            Top Level Domain:
+            {currentCountry.topLevelDomain.map((domain, index) => (
+              <picture key={index}>{domain}</picture>
+            ))}
+          </h2>
+          <h2>
+            Languages:
+            {currentCountry.languages.map((language, index) => (
+              <p key={index}>{language.name}</p>
+            ))}
+          </h2>
+          <h2>
+            Currencies:
+            {currentCountry.currencies.map((currency, index) => (
+              <p key={index}>
+                {currency.symbol} {currency.name}
+              </p>
+            ))}
+          </h2>
+        </div>
       ) : (
         <div>
           <h1>Loading...</h1>
