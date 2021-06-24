@@ -1,6 +1,13 @@
 import React, { useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { CountriesContext } from "../Context/CountriesContext";
+import styled from "styled-components";
+
+const Flag = styled.img`
+  width: 10rem;
+  height: 10rem;
+`;
+
 const CountryDetails = (props) => {
   const { col } = useParams();
 
@@ -16,7 +23,7 @@ const CountryDetails = (props) => {
       {currentCountry ? (
         <div>
           <h1>{currentCountry.name}</h1>
-          <img src={currentCountry.flag} alt={`${currentCountry.name} flag`} />
+          <Flag src={currentCountry.flag} alt={`${currentCountry.name} flag`} />
           <h2>Native Name: {currentCountry.nativeName} </h2>
           <h2>Region: {currentCountry.region} </h2>
           <h2>Population: {currentCountry.population} </h2>
@@ -42,6 +49,15 @@ const CountryDetails = (props) => {
               </p>
             ))}
           </h2>
+          <div>
+            <h2>Border Countries</h2>
+            {currentCountry.borders.length > 0 &&
+              currentCountry.borders.map((border, index) => (
+                <Link to={border.toLowerCase()} key={index}>
+                  {border}
+                </Link>
+              ))}
+          </div>
         </div>
       ) : (
         <div>
