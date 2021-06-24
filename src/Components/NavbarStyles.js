@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  background-color: red;
   background-color: ${({ theme }) => theme.elements};
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
   display: flex;
@@ -11,6 +10,10 @@ export const Nav = styled.nav`
   padding: 0 7rem;
   font-size: 1.7rem;
   transition: all 0.3s;
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 export const Mode = styled.div`

@@ -15,6 +15,11 @@ const CountriesReducer = (state, action) => {
         ...state,
         loading: false,
       };
+    case "SetOneCountry":
+      return {
+        ...state,
+        currentCountry: action.data,
+      };
     default:
       return state;
   }

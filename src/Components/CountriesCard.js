@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { ThemeContext } from "../Context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Card = styled.div`
   background-color: ${({ theme }) => theme.elements};
@@ -21,18 +22,33 @@ const CardImg = styled.div`
   background-size: cover;
 `;
 
-const CountriesCard = ({ name, population, region, capital, flag }) => {
+const CountriesCard = ({
+  name,
+  population,
+  region,
+  capital,
+  flag,
+  alpha3Code,
+}) => {
   const { mode } = useContext(ThemeContext);
   return (
-    <Card theme={mode}>
-      <CardImg flag={flag}></CardImg>
-      <div>
-        <h1>{name}</h1>
-        <h2>{population}</h2>
-        <h2>{region}</h2>
-        <h2>{capital}</h2>
-      </div>
-    </Card>
+    <Link
+      to={`country/${alpha3Code}`}
+      style={{
+        textDecoration: "none",
+        color: mode.text,
+      }}
+    >
+      <Card theme={mode}>
+        <CardImg flag={flag}></CardImg>
+        <div>
+          <h1>{name}</h1>
+          <h2>{population}</h2>
+          <h2>{region}</h2>
+          <h2>{capital}</h2>
+        </div>
+      </Card>
+    </Link>
   );
 };
 
