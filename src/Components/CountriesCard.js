@@ -9,9 +9,10 @@ const Card = styled.div`
   overflow: hidden;
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  height: 35rem;
+  height: 37rem;
   display: grid;
   grid-template-rows: 55% 1fr;
+  width: 27rem;
 `;
 
 const CardImg = styled.div`
@@ -27,7 +28,7 @@ const Span = styled.span`
 
 const Details = styled.div`
   margin-left: 3rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   h2 {
     margin-bottom: 1rem;
   }
