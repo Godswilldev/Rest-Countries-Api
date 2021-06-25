@@ -1,24 +1,30 @@
 const CountriesReducer = (state, action) => {
   switch (action.type) {
-    case "SetCountries":
+    case "HANDLE INPUT":
       return {
         ...state,
-        countries: action.data,
+        [action.name]: action.payload,
       };
-    case "SendingRequest":
+
+    case "SET COUNTRIES":
+      return {
+        ...state,
+        countries: action.payload,
+      };
+    case "SENDING REQUEST":
       return {
         ...state,
         loading: true,
       };
-    case "RequestFinished":
+    case "REQUEST FINISHED":
       return {
         ...state,
         loading: false,
       };
-    case "SetOneCountry":
+    case "SET ONE COUNTRY":
       return {
         ...state,
-        currentCountry: action.data,
+        currentCountry: action.payload,
       };
     default:
       return state;

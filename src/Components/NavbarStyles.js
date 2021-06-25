@@ -6,10 +6,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  padding: 0 7rem;
-  font-size: 1.7rem;
+  height: 12vh;
+  font-size: 1.3rem;
   transition: all 0.3s;
+  padding: 0 5rem;
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.text};
@@ -22,5 +22,6 @@ export const Mode = styled.div`
   cursor: pointer;
   img {
     margin-right: 2rem;
+    width: 2rem;
   }
 `;

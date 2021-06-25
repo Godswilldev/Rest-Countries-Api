@@ -9,8 +9,7 @@ const Card = styled.div`
   overflow: hidden;
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 35rem;
-  height: 40rem;
+  height: 35rem;
   display: grid;
   grid-template-rows: 55% 1fr;
 `;
@@ -22,6 +21,22 @@ const CardImg = styled.div`
   background-size: cover;
 `;
 
+const Span = styled.span`
+  font-weight: 300;
+`;
+
+const Details = styled.div`
+  margin-left: 3rem;
+  margin-top: 2rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+`;
+
+const Name = styled.h1`
+  margin-bottom: 1.5rem;
+`;
+
 const CountriesCard = ({
   name,
   population,
@@ -31,6 +46,7 @@ const CountriesCard = ({
   alpha3Code,
 }) => {
   const { mode } = useContext(ThemeContext);
+
   return (
     <Link
       to={`country/${alpha3Code}`}
@@ -41,12 +57,21 @@ const CountriesCard = ({
     >
       <Card theme={mode}>
         <CardImg flag={flag}></CardImg>
-        <div>
-          <h1>{name}</h1>
-          <h2>{population}</h2>
-          <h2>{region}</h2>
-          <h2>{capital}</h2>
-        </div>
+        <Details>
+          <Name>{name}</Name>
+          <h2>
+            Population:
+            <Span> {population}</Span>
+          </h2>
+          <h2>
+            Region:
+            <Span> {region}</Span>
+          </h2>
+          <h2>
+            Capital:
+            <Span> {capital}</Span>
+          </h2>
+        </Details>
       </Card>
     </Link>
   );

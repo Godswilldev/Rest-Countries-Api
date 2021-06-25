@@ -2,24 +2,34 @@ import React, { useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import { CountriesContext } from "../Context/CountriesContext";
 import styled from "styled-components";
+import axios from "axios";
 
 const Flag = styled.img`
-  width: 10rem;
-  height: 10rem;
+  width: 20rem;
+  height: 20rem;
 `;
 
 const CountryDetails = (props) => {
-  const { col } = useParams();
+  const { alpha3Code } = useParams();
 
-  const { currentCountry, getOneCountry } = useContext(CountriesContext);
+  const { currentCountry } = useContext(CountriesContext);
 
+  const { dispatch } = useContext(CountriesContext);
   useEffect(() => {
-    getOneCountry(col.toLowerCase());
-  });
+    (async function getOneCountry() {
+      dispatch({ type: "SENDING REQUEST" });
+      const { data } = await axios.get(
+        `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`
+      );
+      dispatch({ type: "SET ONE COUNTRY", payload: data });
+      dispatch({ type: "REQUEST FINISHED" });
+    })();
+  }, [alpha3Code, dispatch]);
 
   return (
     <div>
-      <h1>Country Details {col} </h1>
+      <h1>Country Details {alpha3Code} </h1>
+      <button onClick={props.history.goBack}>Back</button>
       {currentCountry ? (
         <div>
           <h1>{currentCountry.name}</h1>

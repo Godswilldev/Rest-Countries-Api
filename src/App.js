@@ -4,7 +4,7 @@ import { ThemeContext } from "./Context/ThemeContext";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import { CountriesProvider } from "./Context/CountriesContext";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import CountryDetails from "./Components/CountryDetails";
 const App = () => {
   const { mode } = useContext(ThemeContext);
@@ -15,7 +15,8 @@ const App = () => {
       <CountriesProvider>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/country/:col" component={CountryDetails} />
+          <Route exact path="/country/:alpha3Code" component={CountryDetails} />
+          <Redirect to="/" />
         </Switch>
       </CountriesProvider>
     </>
