@@ -3,7 +3,7 @@ const size = {
   laptopL: "1440px",
   laptop: "1024px",
   tablet: "768px",
-  mobileL: "425px",
+  mobileL: "475px",
   mobileM: "375px",
   mobileS: "320px",
 };
@@ -23,5 +23,5 @@ export const device = {
 // 2. Wherever you want to make responsive use..
 
 // @media ${device.laptop}{
-//     fled-direction:column;
+
 // }

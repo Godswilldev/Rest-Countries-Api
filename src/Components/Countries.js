@@ -4,11 +4,18 @@ import axios from "axios";
 import { CountriesContext } from "../Context/CountriesContext";
 import styled from "styled-components";
 import CountriesCard from "./CountriesCard";
+import { device } from "../MediaQueries";
 
 const Country = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 `;
 
 const Countries = () => {

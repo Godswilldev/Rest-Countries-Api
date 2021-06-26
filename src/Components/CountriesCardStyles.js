@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../MediaQueries";
 
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.elements};
@@ -10,6 +11,9 @@ export const Card = styled.div`
   display: grid;
   grid-template-rows: 55% 1fr;
   width: 27rem;
+  @media ${device.mobileL} {
+    width: unset;
+  }
 `;
 
 export const CardImg = styled.div`

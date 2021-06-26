@@ -14,6 +14,10 @@ export const Nav = styled.nav`
     text-decoration: none;
     color: ${({ theme }) => theme.text};
   }
+
+  @media ${device.mobileL} {
+    height: 7.5vh;
+  }
 `;
 
 export const Mode = styled.div`
