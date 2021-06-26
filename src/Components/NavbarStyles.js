@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "../MediaQueries";
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.elements};
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
