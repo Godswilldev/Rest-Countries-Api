@@ -5,6 +5,7 @@ import { CountriesContext } from "../Context/CountriesContext";
 import styled from "styled-components";
 import CountriesCard from "./CountriesCard";
 import { device } from "../MediaQueries";
+import Loader from "../images/Blocks-1s-200px.svg";
 
 const Country = styled.div`
   display: grid;
@@ -40,7 +41,9 @@ const Countries = () => {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div>
+          <img src={Loader} alt="Loader" />
+        </div>
       ) : (
         <Country>
           {filteredCountries.map((country) => (

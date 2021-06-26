@@ -4,6 +4,7 @@ import { device } from "../MediaQueries";
 export const Wrapper = styled.div`
   width: 90%;
   margin: 7rem auto;
+  overflow: hidden;
 `;
 
 export const WrapperDetails = styled.div`

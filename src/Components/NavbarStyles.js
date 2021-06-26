@@ -10,11 +10,14 @@ export const Nav = styled.nav`
   font-size: 1.3rem;
   transition: all 0.3s;
   padding: 0 3rem;
+  z-index: 999;
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.text};
   }
-
+  @media ${device.tablet} {
+    height: 8.5vh;
+  }
   @media ${device.mobileL} {
     height: 7.5vh;
   }
