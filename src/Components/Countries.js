@@ -8,7 +8,7 @@ import CountriesCard from "./CountriesCard";
 const Country = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 5rem;
 `;
 
 const Countries = () => {
@@ -33,7 +33,7 @@ const Countries = () => {
   return (
     <div>
       {loading ? (
-        <h1>loading...</h1>
+        <h1>Loading...</h1>
       ) : (
         <Country>
           {filteredCountries.map((country) => (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { device } from "../MediaQueries";
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.elements};
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   height: 10vh;
   font-size: 1.3rem;
   transition: all 0.3s;
-  padding: 0 5rem;
+  padding: 0 3rem;
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.text};

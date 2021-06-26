@@ -1,42 +1,7 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 import { ThemeContext } from "../Context/ThemeContext";
 import { Link } from "react-router-dom";
-
-const Card = styled.div`
-  background-color: ${({ theme }) => theme.elements};
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  height: 37rem;
-  display: grid;
-  grid-template-rows: 55% 1fr;
-  width: 27rem;
-`;
-
-const CardImg = styled.div`
-  background-image: url(${({ flag }) => flag});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const Span = styled.span`
-  font-weight: 300;
-`;
-
-const Details = styled.div`
-  margin-left: 3rem;
-  margin-top: 1rem;
-  h2 {
-    margin-bottom: 1rem;
-  }
-`;
-
-const Name = styled.h1`
-  margin-bottom: 1.5rem;
-`;
+import { Card, CardImg, Span, Details, Name } from "./CountriesCardStyles";
 
 const CountriesCard = ({
   name,

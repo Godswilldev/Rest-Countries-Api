@@ -6,12 +6,12 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { CountriesContext } from "../Context/CountriesContext";
 import { ThemeContext } from "../Context/ThemeContext";
-
+import { device } from "../MediaQueries";
 import styled from "styled-components";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(0),
     minWidth: 200,
     color: theme.text,
   },
@@ -23,8 +23,11 @@ const useStyles = makeStyles((theme) => ({
 const Wrapper = styled.div`
   /* color: #fff;
   #demo-simple-select-outlined-label {
-    font-size: 1.3rem;
+    font-size: 3rem;
   } */
+  @media ${device.mobileL} {
+    margin-bottom: 3rem;
+  }
 `;
 
 export default function Dropdown() {
@@ -59,7 +62,6 @@ export default function Dropdown() {
           }
           style={{
             color: theme === "light" ? "#111517" : "#ffffff",
-            // fontSize: "1.3rem",
             backgroundColor: theme === "light" ? "#fafafa" : "#2b3945",
             boxShadow: "0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3)",
           }}

@@ -3,56 +3,15 @@ import { useParams, Link } from "react-router-dom";
 import { CountriesContext } from "../Context/CountriesContext";
 import { ThemeContext } from "../Context/ThemeContext";
 import Button from "@material-ui/core/Button";
-import styled from "styled-components";
 import axios from "axios";
-
-const Wrapper = styled.div`
-  width: 90%;
-  margin: 7rem auto;
-`;
-
-const WrapperDetails = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Buttons = styled.div`
-  margin-bottom: 3rem;
-`;
-
-const Flag = styled.img`
-  width: 40%;
-  height: 30rem;
-`;
-
-const WrapperInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  span {
-    font-weight: 500;
-  }
-  h2 {
-    margin: 1rem 0;
-  }
-`;
-
-const Border = styled.div`
-  margin-top: 3rem;
-  span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-right: 0.5rem;
-  }
-  Button {
-    margin-right: 1rem;
-    background-color: ${({ theme }) => theme.elements};
-  }
-  a {
-    text-decoration: none;
-  }
-`;
+import {
+  Wrapper,
+  WrapperDetails,
+  Buttons,
+  Flag,
+  WrapperInfo,
+  Border,
+} from "./CountryDetailsStyles";
 
 const CountryDetails = (props) => {
   const { alpha3Code } = useParams();
