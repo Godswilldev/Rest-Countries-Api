@@ -26,6 +26,14 @@ export const Buttons = styled.div`
 export const Flag = styled.img`
   width: 40%;
   height: 30rem;
+
+
+  @media ${device.mobileL} {
+    width:70%;
+height:40rem;
+margin-bottom:3rem;
+  }
+
 `;
 
 export const WrapperInfo = styled.div`
