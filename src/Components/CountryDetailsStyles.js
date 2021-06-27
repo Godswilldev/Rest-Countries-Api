@@ -29,7 +29,7 @@ export const Flag = styled.img`
 
 
   @media ${device.mobileL} {
-    width:70%;
+    width:90%;
 height:40rem;
 margin-bottom:3rem;
   }
@@ -57,6 +57,7 @@ export const Border = styled.div`
   }
   Button {
     margin-right: 1rem;
+margin-bottom:1rem;
     background-color: ${({ theme }) => theme.elements};
   }
   a {
