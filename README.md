@@ -18,7 +18,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
     - [`yarn start`](#yarn-start)
     - [`yarn build`](#yarn-build)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -39,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add solution URL here](https://rest-countries-api-xi-six.vercel.app)
+- Live Site URL: [Here] (https://rest-countries-api-xi-six.vercel.app)
 
 ## My process
 
@@ -55,8 +54,6 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 In this challenge, i got more confident using the react Context Api, hooks and Styled-components.
 This challenge also helped me with the confidence to be able to read docs on my own (Framer-Motion docs).
