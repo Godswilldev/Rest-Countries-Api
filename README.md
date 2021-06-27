@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Here] (https://rest-countries-api-xi-six.vercel.app)
+- Live Site URL: (https://rest-countries-api-xi-six.vercel.app)
 
 ## My process
 
