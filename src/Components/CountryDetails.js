@@ -29,7 +29,7 @@ const CountryDetails = (props) => {
     (async function getOneCountry() {
       dispatch({ type: "SENDING REQUEST" });
       const { data } = await axios.get(
-        `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`
+        `https://restcountries.com/v2/alpha/${alpha3Code}`
       );
       dispatch({ type: "SET ONE COUNTRY", payload: data });
       dispatch({ type: "REQUEST FINISHED" });
