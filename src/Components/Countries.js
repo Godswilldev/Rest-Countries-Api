@@ -25,7 +25,7 @@ const Countries = () => {
   useEffect(() => {
     (async function getAllCountries() {
       dispatch({ type: "SENDING REQUEST" });
-      const { data } = await axios.get("https://restcountries.eu/rest/v2/all");
+      const { data } = await axios.get("https://restcountries.com/v2/all");
       dispatch({ type: "SET COUNTRIES", payload: data });
       dispatch({ type: "REQUEST FINISHED" });
     })();
